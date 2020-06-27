@@ -175,7 +175,7 @@ h5,
 h6 {
   font-size:1em;
 }
-  .header {
+  /* .header {
     height: 10vh;
     order: 1;
   }
@@ -186,7 +186,7 @@ h6 {
 
   .switch  {
 order: 3;
-  }
+  } */
 
 
   .translator-main-switch {

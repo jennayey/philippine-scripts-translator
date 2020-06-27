@@ -1,0 +1,153 @@
+/* 
+Philippine Translator Scripts Stylesheet
+
+01 Variables
+02 Fonts
+03 Desktop Styles
+04 Mobile Styles 
+*/
+
+/* 01 Variables */
+:root {
+  --border-radius: 10px;
+  --main-color: #22735f;
+  --accent-color: #15cda1;
+  --light-accent-color: #F1FCF7;
+  --gray-light: #F5F5F5;
+  --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+}
+/* ************************************************************************************************** */
+/* 02 Fonts */
+@font-face {
+  font-family: Ubuntu Bold;
+  src: url(assets/fonts/Ubuntu/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+  font-family: Ubuntu Medium;
+  src: url(assets/fonts/Ubuntu/Ubuntu-Medium.ttf);
+}
+@font-face {
+  font-family: Ubuntu Regular;
+  src: url(assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+/* ************************************************************************************************** */
+
+/* 03 Desktop Styles */
+
+/* Text Styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Ubuntu Regular;
+  color: var(--main-color);
+  margin: 0;
+}
+
+p {
+  font-family: Ubuntu Regular;
+}
+
+/* Container Styles */
+body {
+  margin: 0px;
+}
+
+.translator-main-switch {
+  display: flex;
+  justify-content: space-between;
+  width: 55vw;
+  height: 10vh;
+  align-items: center;
+}
+
+.translator-main-blocks {
+  width: 100vw;
+
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "tagalog"; */
+  display: flex;
+}
+
+.translator-main-blocks div {
+  flex: 50%;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.flex-jcc {
+  display: flex;
+  justify-content: center;
+}
+
+.border-bottom {
+  border-bottom: solid;
+  border-color: var(--gray-light);
+}
+
+.border-right {
+  border-right: solid;
+  border-color: var(--gray-light);
+}
+
+textarea, button {
+  border: none;
+  outline:none;
+}
+
+button {
+  background: none;
+}
+
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40vh;
+  resize: none;
+  font-size: 2em;
+}
+
+.translator-main-blocks-translated {
+  background-color:var(--gray-light);
+}
+.translator-main-blocks-translated > * {
+  background-color: var(--gray-light);
+}
+
+/* ************************************************************************************************** */
+
+/* 04 Mobile Styles */
+
+@media screen and (max-width: 728px) {
+  .header {
+    height: 10vh;
+  }
+  .translator-main-switch {
+    width: 80vw;
+    height: 15vh;
+  }
+  textarea {
+    height: 30vh;
+  }
+
+  .translator-main-blocks > * {
+    border: none;
+  }
+  .translator-main-blocks {
+    flex-wrap: wrap;
+
+    width: 100%;
+    flex-basis: 100%;
+  }
+  .translator-main-blocks-translated {
+    background-color: var(--main-color);
+  }
+  .translator-main-blocks-translated > *, .translator-main-blocks-translated h2{
+    background-color: var(--main-color);
+    color: white;
+  }
+}

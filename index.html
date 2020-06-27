@@ -21,7 +21,7 @@
     <div class="translator-main-switch  flex-jcc">
         <div class="translator-main-switch-content">
           <h3>Tagalog</h3>
-          <h3>PLHL</h3>
+          <button id="switchButton" onclick="" style="cursor: pointer;"><h2>Switch</h2></button>
           <h3>Baybayin</h3>
         </div>
       </div>
@@ -42,7 +42,7 @@
                 placeholder="Type text here"
                 onkeyup="convertText()"
               ></textarea>
-              <button id="clearButton" onclick="clearText()" onmouseover="" style="cursor: pointer;"><h2>Clear</h2></button>
+              <button id="clearButton" onclick="clearText()" style="cursor: pointer;">Clear</button>
   
             </div>
   
@@ -55,7 +55,7 @@
                 id="translatedTextArea"
               ></textarea>
   
-              <button id="copyButton" onclick=" onmouseover="" style="cursor: pointer;"><h2>Copy</h2></button>
+              <!-- <button id="copyButton" onclick="" style="cursor: pointer;">Copy (Coming Soon)</button> -->
           </div>
   
             <!-- Translated Text Area  End-->

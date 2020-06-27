@@ -12,24 +12,31 @@ Philippine Translator Scripts Stylesheet
   --border-radius: 10px;
   --main-color: #22735f;
   --accent-color: #15cda1;
-  --light-accent-color: #F1FCF7;
-  --gray-light: #F5F5F5;
+  --plain-text-color: #20114a;
+  --gray-light: #f5f5f5;
   --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
+  --font-size-desktop: 2em;
+  --font-size-mobile: 1.2em;
 }
 /* ************************************************************************************************** */
 /* 02 Fonts */
 @font-face {
   font-family: Ubuntu Bold;
-  src: url(assets/fonts/Ubuntu/Ubuntu-Bold.ttf);
+  src: url(/assets/fonts/Ubuntu/Ubuntu-Bold.ttf);
 }
 
 @font-face {
   font-family: Ubuntu Medium;
-  src: url(assets/fonts/Ubuntu/Ubuntu-Medium.ttf);
+  src: url(/assets/fonts/Ubuntu/Ubuntu-Medium.ttf);
 }
 @font-face {
   font-family: Ubuntu Regular;
-  src: url(assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+  src: url(/assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: Baybayin;
+  src: url(/assets/fonts/Baybayin/BaybayinNamin2020-4.otf);
 }
 /* ************************************************************************************************** */
 
@@ -49,6 +56,7 @@ h6 {
 
 p {
   font-family: Ubuntu Regular;
+  color: var(--plain-text-color);
 }
 
 /* Container Styles */
@@ -56,12 +64,28 @@ body {
   margin: 0px;
 }
 
-.translator-main-switch {
+.translator-main-switch,
+.header {
+  display: flex;
+  height: 15vh;
+  align-items: center;
+}
+.translator-main-switch-content {
   display: flex;
   justify-content: space-between;
+
   width: 55vw;
-  height: 10vh;
-  align-items: center;
+
+}
+.header {
+  justify-content: flex-start;
+  padding: 0 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: column;
 }
 
 .translator-main-blocks {
@@ -94,9 +118,10 @@ body {
   border-color: var(--gray-light);
 }
 
-textarea, button {
+textarea,
+button {
   border: none;
-  outline:none;
+  outline: none;
 }
 
 button {
@@ -109,13 +134,19 @@ textarea {
   height: 40vh;
   resize: none;
   font-size: 2em;
+  color: var(--plain-text-color);
+  font-size: var(--font-size-desktop);
+  line-height: 1.5em;
 }
 
 .translator-main-blocks-translated {
-  background-color:var(--gray-light);
+  background-color: var(--gray-light);
 }
 .translator-main-blocks-translated > * {
   background-color: var(--gray-light);
+}
+#translatedTextArea {
+  font-family: Baybayin;
 }
 
 /* ************************************************************************************************** */
@@ -123,30 +154,62 @@ textarea {
 /* 04 Mobile Styles */
 
 @media screen and (max-width: 728px) {
+
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size:1em;
+}
   .header {
     height: 10vh;
+    order: 1;
   }
+
+  .translator-main {
+    order:2;
+  }
+
+  .switch  {
+order: 3;
+  }
+
+
   .translator-main-switch {
+    height: 10vh;
+  }
+  .translator-main-switch-content {
     width: 80vw;
-    height: 15vh;
+    /* height: 10vh; */
   }
   textarea {
-    height: 30vh;
+    font-size: var(--font-size-mobile);
+    height  : 80%;
+    padding: 10px;
   }
 
-  .translator-main-blocks > * {
-    border: none;
+  .translator-main {
+    height: 80vh;
+
   }
+
   .translator-main-blocks {
     flex-wrap: wrap;
-
     width: 100%;
     flex-basis: 100%;
+  }
+  .translator-main-blocks-translated, .translator-main-blocks-raw {
+flex: 0 0 40vh;  }
+  .translator-main-blocks > * {
+    border: none;
   }
   .translator-main-blocks-translated {
     background-color: var(--main-color);
   }
-  .translator-main-blocks-translated > *, .translator-main-blocks-translated h2{
+  .translator-main-blocks-translated > *,
+  .translator-main-blocks-translated h2 {
     background-color: var(--main-color);
     color: white;
   }

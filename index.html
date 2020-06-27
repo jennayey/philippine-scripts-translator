@@ -1,62 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="css/index.css" />
-
+    <link rel="stylesheet" href="/css/index.css" />
+<script src="/js/index.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Philippine Scripts Translator</title>
+
   </head>
   <body>
-    <!-- Navigation / Header  -->
-    <!-- <div id="navigation-header" class="header">
-      <h2>Philippine Script Translator</h2>
-    </div> -->
-    <!-- Navigation / Header  -->
-
-    <!-- Main Translator Div -->
-    <div id="translatorMain" class="translator-main flex-jcc">
-      <div>
-        <!-- Script picker and Switcher Div  -->
-        <div class="border-bottom flex-jcc">
-          <div class="translator-main-switch">
-            <h3>Tagalog</h3>
-            <h3>PLHL</h3>
-            <h3>Baybayin</h3>
-          </div>
-        </div>
-        <!-- Script picker and Switcher Div End -->
-
-        <!-- Translator Blocks Div  -->
-        <div class="translator-main-blocks">
-          <!-- Tagalog Text Area -->
-          <div class="translator-main-blocks-raw border-right border-bottom">
-            <textarea
-              name="tagalog-text-area"
-              id="tagalogTextArea"
-              placeholder="Type text here"
-            ></textarea>
-            <button id="clearButton" onclick=" onmouseover="" style="cursor: pointer;"><h2>Clear</h2></button>
-
-          </div>
-
-          <!-- Tagalog Text Area  End-->
-
-          <!-- Translated  Text Area -->
-          <div class="translator-main-blocks-translated border-bottom">
-            <textarea
-              name="translated-text-area"
-              id="translatedTextArea"
-            ></textarea>
-
-            <button id="copyButton" onclick=" onmouseover="" style="cursor: pointer;"><h2>Copy</h2></button>
-        </div>
-
-          <!-- Translated Text Area  End-->
-        </div>
-        <!-- Translator Blocks Div End  -->
+    <div class="flex-row">
+        <!-- Navigation / Header  -->
+    <div id="navigation-header" class="header ">
+        <h3>Philippine Script Translator</h3>
       </div>
+      <!-- Navigation / Header End -->
+                <!-- Script picker and Switcher Div  -->
+
+<div class="flex-jcc switch border-bottom">
+    <div class="translator-main-switch  flex-jcc">
+        <div class="translator-main-switch-content">
+          <h3>Tagalog</h3>
+          <h3>PLHL</h3>
+          <h3>Baybayin</h3>
+        </div>
+      </div>
+</div>
+  <!-- Script picker and Switcher Div End -->
+      <!-- Main Translator Div -->
+      <div id="translatorMain" class="translator-main flex-jcc">
+        
+        
+  
+          <!-- Translator Blocks Div  -->
+          <div class="translator-main-blocks">
+            <!-- Tagalog Text Area -->
+            <div class="translator-main-blocks-raw border-right border-bottom">
+              <textarea
+                name="tagalog-text-area"
+                id="tagalogTextArea"
+                placeholder="Type text here"
+                onkeyup="convertText()"
+              ></textarea>
+              <button id="clearButton" onclick="clearText()" onmouseover="" style="cursor: pointer;"><h2>Clear</h2></button>
+  
+            </div>
+  
+            <!-- Tagalog Text Area  End-->
+  
+            <!-- Translated  Text Area -->
+          <div class="translator-main-blocks-translated border-bottom">
+              <textarea
+                name="translated-text-area"
+                id="translatedTextArea"
+              ></textarea>
+  
+              <button id="copyButton" onclick=" onmouseover="" style="cursor: pointer;"><h2>Copy</h2></button>
+          </div>
+  
+            <!-- Translated Text Area  End-->
+          </div>
+          <!-- Translator Blocks Div End  -->
+      </div>
+      <!-- Main Translator Div -->
     </div>
-    <!-- Main Translator Div -->
   </body>
 </html>

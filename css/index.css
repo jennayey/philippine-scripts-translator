@@ -24,21 +24,21 @@ Philippine Translator Scripts Stylesheet
 /* 02 Fonts */
 @font-face {
   font-family: Ubuntu Bold;
-  src: url(/assets/fonts/Ubuntu/Ubuntu-Bold.ttf);
+  src: url(assets/fonts/Ubuntu/Ubuntu-Bold.ttf);
 }
 
 @font-face {
   font-family: Ubuntu Medium;
-  src: url(/assets/fonts/Ubuntu/Ubuntu-Medium.ttf);
+  src: url(assets/fonts/Ubuntu/Ubuntu-Medium.ttf);
 }
 @font-face {
   font-family: Ubuntu Regular;
-  src: url(/assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
+  src: url(assets/fonts/Ubuntu/Ubuntu-Regular.ttf);
 }
 
 @font-face {
   font-family: Baybayin;
-  src: url(/assets/fonts/Baybayin/BaybayinNamin2020-4.otf);
+  src: url(assets/fonts/Baybayin/BaybayinNamin2020-4.otf);
 }
 /* ************************************************************************************************** */
 

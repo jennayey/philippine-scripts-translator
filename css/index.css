@@ -69,7 +69,7 @@ body {
 .translator-main-switch,
 .header {
   display: flex;
-  height: 10vh;
+  height: 12vh;
   align-items: center;
 }
 .translator-main-switch-content {

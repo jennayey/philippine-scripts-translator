@@ -1,9 +1,29 @@
+function showTooltip () {
+  let toast = document.getElementById('toast')
+
+  toast.classList.add('show')
+  setTimeout (
+    function () {
+      toast.classList.remove ('show')
+    }, 2100
+  )
+}
+
 function clearText() {
   let rawText = document.getElementById("tagalogTextArea");
   let translatedText = document.getElementById("translatedTextArea");
   rawText.value = "";
   translatedText.value = "";
   // goBack()
+}
+
+function copyText () {
+  let translatedText = document.getElementById("translatedTextArea");
+translatedText.select()
+// translatedText.
+document.execCommand("copy")
+
+showTooltip()
 }
 
 function convertText() {

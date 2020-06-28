@@ -69,7 +69,7 @@ body {
 .translator-main-switch,
 .header {
   display: flex;
-  height: 15vh;
+  height: 10vh;
   align-items: center;
 }
 .translator-main-switch-content {
@@ -188,17 +188,15 @@ h6 {
 order: 3;
   } */
 .header {
-  height: 10vh;
+  /* height: 10vh; */
+  height: 70px;
 }
 
 .header h3 {
   margin: 10px;
 }
-
-  .translator-main-switch {
-    height: 10vh;
-  }
   .translator-main-switch-content {
+    height: 50px;
     margin: 10px;
     width: 80vw;
     /* height: 10vh; */
@@ -209,11 +207,7 @@ order: 3;
     padding: 10px;
   }
 
-  .translator-main {
-    /* height: 80vh; */
-
-  }
-
+  
   .translator-main-blocks {
     flex-wrap: wrap;
     width: 100%;

@@ -26,6 +26,10 @@ document.execCommand("copy")
 showTooltip()
 }
 
+function focus () {
+  let rawText = document.getElementById("tagalogTextArea")
+rawText.focus()
+}
 function convertText() {
   let rawText = document.getElementById("tagalogTextArea").value.toLowerCase();
   let translatedText = document.getElementById("translatedTextArea");

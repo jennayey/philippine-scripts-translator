@@ -187,7 +187,13 @@ h6 {
   .switch  {
 order: 3;
   } */
+.header {
+  height: 10vh;
+}
 
+.header h3 {
+  margin: 10px;
+}
 
   .translator-main-switch {
     height: 10vh;

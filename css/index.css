@@ -56,6 +56,9 @@ h6 {
   color: var(--main-color);
   margin: 0;
 }
+h4 {
+  color: #b5b5b5;
+}
 
 p {
   font-family: Ubuntu Regular;

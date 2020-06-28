@@ -193,6 +193,7 @@ order: 3;
     height: 10vh;
   }
   .translator-main-switch-content {
+    margin: 10px;
     width: 80vw;
     /* height: 10vh; */
   }

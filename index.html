@@ -28,19 +28,26 @@
         <!-- Navigation / Header  -->
     <div id="navigation-header" class="header ">
         <h3>Philippine Script Translator</h3>
+        <h2 style="font-family: Hanunuo;"></h2>
       </div>
       <!-- Navigation / Header End -->
                 <!-- Script picker and Switcher Div  -->
 
 <div id="languageSwitch" class="flex-jcc switch border-bottom">
     <div class="translator-main-switch  flex-jcc">
-        <div class="translator-main-switch-content">
-          <h3>Tagalog</h3>
-          <h4>to</h4>
-          <!-- <button disabled id="switchButton" onclick="" ><h2 style="color:gray;">Switch</h2></button> -->
-          <h3>Baybayin</h3>
-        </div>
-      </div>
+<div class="dropdown">
+   <button id="dropdownButton" onclick="showDropdown()" class="dropdown-button">
+     <h3 id="languageSelected">Tagalog to Baybayin</h3>
+   </button>
+   <div id="dropdownContents" class="dropdown-contents">
+    <a onclick="changeLanguage(this)"id="baybayin">Tagalog to Baybayin</a>
+     <a onclick="changeLanguage(this)" id="hanunuo">Tagalog to Hanunuo</a>
+     <a id="tagbanwa" class="disabled" >Tagalog to Tagbanwa</a>
+     <a id="buhid" class="disabled" >Tagalog to Buhid</a>
+
+   </div>
+</div>
+</div>
 </div>
   <!-- Script picker and Switcher Div End -->
       <!-- Main Translator Div -->
@@ -68,9 +75,9 @@
   
             <!-- Translated  Text Area -->
           <div class="translator-main-blocks-translated border-bottom">
-            <label for="translatedTextArea">Baybayin Translation</label>
+            <label for="translatedTextArea">Translation</label>
 
-              <textarea
+              <textarea 
               
                 name="translated-text-area"
                 id="translatedTextArea"

@@ -12,8 +12,12 @@ Philippine Translator Scripts Stylesheet
   --border-radius: 10px;
   --main-color: #22735f;
   --accent-color: #15cda1;
+  --main-color-ligher:#2c8871;
   --plain-text-color: #20114a;
   --gray-light: #f5f5f5;
+  --gray-medium: #ebebeb;
+  --box-shadow-darker: 0px 5px 30px rgba(0, 0, 0, 0.12);
+
   --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
   --font-size-desktop: 2em;
   --font-size-mobile: 1.5em;
@@ -41,6 +45,16 @@ Philippine Translator Scripts Stylesheet
   font-family: Baybayin;
   src: url(.././assets/fonts/Baybayin/BaybayinNamin2020-4.otf);
 }
+
+@font-face {
+  font-family: Hanunuo;
+  src: url(.././assets/fonts/Baybayin/TintangHanunuo2.otf);
+}
+
+/* @font-face {
+  font-family: Hanunuo;
+  src: url(TintangHanunuo.otf);
+} */
 /* ************************************************************************************************** */
 
 /* 03 Desktop Styles */
@@ -51,13 +65,17 @@ h2,
 h3,
 h4,
 h5,
-h6, label {
+h6, label, a {
  font-family: Ubuntu Regular;
   color: var(--main-color);
   margin: 0;
 }
 h4 {
   color: #4A4A4A;
+}
+
+.disabled {
+  color: var(--gray-medium); 
 }
 
 p {
@@ -76,13 +94,6 @@ body {
   height: 12vh;
   align-items: center;
 }
-.translator-main-switch-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 55vw;
-}
 .header {
   justify-content: flex-start;
   padding: 0 20px;
@@ -96,10 +107,6 @@ body {
 
 .translator-main-blocks {
   width: 100vw;
-
-  /* display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "tagalog"; */
   display: flex;
 }
 
@@ -132,9 +139,10 @@ button {
 }
 
 button {
-  /* background: none; */
   border-radius: 20px;
-  padding: 10px;
+  padding: 10px 20px;
+background-color: #ffffff00;
+
 }
 
 textarea {
@@ -147,6 +155,7 @@ textarea {
   color: var(--plain-text-color);
   font-size: var(--font-size-desktop);
   line-height: 1.5em;
+  
 }
 
 .translator-main-blocks-translated {
@@ -156,13 +165,25 @@ textarea {
   background-color: var(--gray-light);
 }
 
+button:hover{
+  background-color: var(--gray-medium);
+}
+
 .translator-main-blocks button {
   /* font-size: var(--font-size-mobile); */
   font-family: Ubuntu Bold;
   color: var(--main-color);
 }
 #translatedTextArea {
+}
+
+.baybayin {
   font-family: Baybayin;
+
+}
+.hanunuo {
+  font-family: Hanunuo;
+
 }
 
 /* Toast */
@@ -188,7 +209,49 @@ margin: 15px;}
   animation: fadein 0.3s, fadeout 0.3s 2s;
 }
 
+/* Dropdown Styles */
 
+.dropdown {
+  display: inline-block;
+  position:relative;
+}
+.dropdown {
+  border: solid;
+  border-radius: 20px;
+  border-color: var(--gray-medium);
+}
+
+.dropdown-contents {
+  margin-top: 10px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  text-align: center;
+  min-width: 220px;
+  
+  right: -22px;
+  
+  box-shadow: var(--box-shadow-darker);
+  border-radius: 20px;
+}
+
+
+.dropdown-contents a {
+display: block;
+padding: 15px;
+font-weight: bold;
+text-decoration: none;
+border-radius: 20px;
+
+}
+
+.selected {
+  background-color: var(--gray-medium);
+}
+
+.show {
+  display: block;
+}
 @keyframes fadein {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -209,7 +272,8 @@ margin: 15px;}
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .select-css {
     font-size: 1em;
   }
   /* .header {
@@ -237,11 +301,10 @@ order: 3;
   .translator-main-switch {
     height: 70px;
   }
-  .translator-main-switch-content {
+  /* .translator-main-switch-content {
     margin: 10px;
     width: 80vw;
-    /* height: 10vh; */
-  }
+  } */
   textarea {
     font-size: var(--font-size-mobile);
     /* height  : 80%; */
@@ -272,6 +335,12 @@ order: 3;
   .translator-main-blocks-translated button {
     background-color: var(--main-color);
     color: white;
+  }
+  .translator-main-blocks-translated button {
+    background-color: var(--main-color-ligher)
+  }
+  button {
+    background-color: var(--gray-medium);
   }
 
   #toast {

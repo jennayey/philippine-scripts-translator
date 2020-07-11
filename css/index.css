@@ -47,7 +47,7 @@ Philippine Translator Scripts Stylesheet
 }
 
 @font-face {
-  font-family: Hanunuo;
+  font-family: Hanunoo;
   src: url(.././assets/fonts/Baybayin/TintangHanunuo2.otf);
 }
 
@@ -181,8 +181,8 @@ button:hover{
   font-family: Baybayin;
 
 }
-.hanunuo {
-  font-family: Hanunuo;
+.hanunoo {
+  font-family: Hanunoo;
 
 }
 

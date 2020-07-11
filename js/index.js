@@ -1,6 +1,9 @@
+//loads function on webpage load
 window.onload = function () {
   document.getElementById("translatedTextArea").classList.toggle("baybayin");
 };
+
+//copy text tooltip
 function showTooltip() {
   let toast = document.getElementById("toast");
 
@@ -110,7 +113,7 @@ function baybayinTranslate() {
   return rawText;
 }
 
-function hanunuoTranslate() {
+function hanunooTranslate() {
   let rawText = document.getElementById("tagalogTextArea").value.toLowerCase();
   rawText = rawText.replace(/o/g, "u");
   rawText = rawText.replace(/e/g, "i");
@@ -196,8 +199,8 @@ function convertText() {
     case "Baybayin":
       translatedText.value = baybayinTranslate();
       break;
-    case "Hanunuo":
-      translatedText.value = hanunuoTranslate();
+    case "Hanunoo":
+      translatedText.value = hanunooTranslate();
       break;
     case "":
       translatedText.value = baybayinTranslate();
@@ -211,13 +214,10 @@ function showDropdown() {
   //toggles the dropdown
   document.getElementById("dropdownContents").classList.toggle("show");
 }
-
 function changeLanguage(language) {
   let languageChoices = document.getElementById("dropdownContents").children;
-  // console.log(language.id);
   //removes former selected
   let translatedText = document.getElementById("translatedTextArea");
-
   for (a = 0; a < languageChoices.length; a++) {
     if (languageChoices[a].classList.contains("selected")) {
       languageChoices[a].classList.toggle("selected");

@@ -191,6 +191,83 @@ function hanunooTranslate() {
   return rawText;
 }
 
+function buhidTranslate() {
+  let rawText = document.getElementById("tagalogTextArea").value.toLowerCase();
+  rawText = rawText.replace(/o/g, "u");
+  rawText = rawText.replace(/e/g, "i");
+
+  rawText = rawText.replace(/nga/g, "\u1745");
+  rawText = rawText.replace(/ngi/g, "\u1745\u1752");
+  rawText = rawText.replace(/ngu/g, "\u1745\u1753");
+  rawText = rawText.replace(/ng/g, "");
+
+  rawText = rawText.replace(/ka/g, "\u1743");
+  rawText = rawText.replace(/ga/g, "\u1744");
+  rawText = rawText.replace(/ta/g, "\u1746");
+  rawText = rawText.replace(/da/g, "\u1747");
+  rawText = rawText.replace(/na/g, "\u1748");
+  rawText = rawText.replace(/pa/g, "\u1749");
+  rawText = rawText.replace(/ba/g, "\u174A");
+  rawText = rawText.replace(/ma/g, "\u174B");
+  rawText = rawText.replace(/ya/g, "\u174C");
+  rawText = rawText.replace(/ra/g, "\u174D");
+  rawText = rawText.replace(/la/g, "\u174E");
+  rawText = rawText.replace(/wa/g, "\u174F");
+  rawText = rawText.replace(/sa/g, "\u1750");
+  rawText = rawText.replace(/ha/g, "\u1751");
+
+  rawText = rawText.replace(/ki/g, "\u1743\u1752");
+  rawText = rawText.replace(/gi/g, "\u1744\u1752");
+  rawText = rawText.replace(/ti/g, "\u1746\u1752");
+  rawText = rawText.replace(/di/g, "\u1747\u1752");
+  rawText = rawText.replace(/ni/g, "\u1748\u1752");
+  rawText = rawText.replace(/pi/g, "\u1749\u1752");
+  rawText = rawText.replace(/bi/g, "\u174A\u1752");
+  rawText = rawText.replace(/mi/g, "\u174B\u1752");
+  rawText = rawText.replace(/yi/g, "\u174C\u1752");
+  rawText = rawText.replace(/ri/g, "\u174D\u1752");
+  rawText = rawText.replace(/li/g, "\u174E\u1752");
+  rawText = rawText.replace(/wi/g, "\u174F\u1752");
+  rawText = rawText.replace(/si/g, "\u1750\u1752");
+  rawText = rawText.replace(/hi/g, "\u1751\u1752");
+
+  rawText = rawText.replace(/ku/g, "\u1743\u1753");
+  rawText = rawText.replace(/gu/g, "\u1744\u1753");
+  rawText = rawText.replace(/tu/g, "\u1746\u1753");
+  rawText = rawText.replace(/du/g, "\u1747\u1753");
+  rawText = rawText.replace(/nu/g, "\u1748\u1753");
+  rawText = rawText.replace(/pu/g, "\u1749\u1753");
+  rawText = rawText.replace(/bu/g, "\u174A\u1753");
+  rawText = rawText.replace(/mu/g, "\u174B\u1753");
+  rawText = rawText.replace(/yu/g, "\u174C\u1753");
+  rawText = rawText.replace(/ru/g, "\u174D\u1753");
+  rawText = rawText.replace(/lu/g, "\u174E\u1753");
+  rawText = rawText.replace(/wu/g, "\u174F\u1753");
+  rawText = rawText.replace(/su/g, "\u1750\u1753");
+  rawText = rawText.replace(/hu/g, "\u1751\u1753");
+
+  rawText = rawText.replace(/k/g, "");
+  rawText = rawText.replace(/g/g, "");
+  rawText = rawText.replace(/t/g, "");
+  rawText = rawText.replace(/d/g, "");
+  rawText = rawText.replace(/n/g, "");
+  rawText = rawText.replace(/p/g, "");
+  rawText = rawText.replace(/b/g, "");
+  rawText = rawText.replace(/m/g, "");
+  rawText = rawText.replace(/y/g, "");
+  rawText = rawText.replace(/r/g, "");
+  rawText = rawText.replace(/l/g, "");
+  rawText = rawText.replace(/w/g, "");
+  rawText = rawText.replace(/s/g, "");
+  rawText = rawText.replace(/h/g, "");
+
+  rawText = rawText.replace(/a/g, "\u1740");
+  rawText = rawText.replace(/i/g, "\u1741");
+  rawText = rawText.replace(/u/g, "\u1742");
+
+  return rawText;
+}
+
 function convertText() {
   let translatedText = document.getElementById("translatedTextArea");
   let languageSelected = document.getElementById("languageSelected").innerHTML;
@@ -202,9 +279,9 @@ function convertText() {
     case "Hanunoo":
       translatedText.value = hanunooTranslate();
       break;
-    case "":
-      translatedText.value = baybayinTranslate();
-
+    case "Buhid":
+      translatedText.value = buhidTranslate();
+      break;
     default:
       translatedText.value = baybayinTranslate();
   }

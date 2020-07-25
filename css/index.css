@@ -51,6 +51,11 @@ Philippine Translator Scripts Stylesheet
   src: url(.././assets/fonts/Baybayin/TintangHanunuo2.otf);
 }
 
+@font-face {
+  font-family: Buhid;
+  src: url(.././assets/fonts/Baybayin/TintangBuhid2.otf);
+}
+
 /* @font-face {
   font-family: Hanunuo;
   src: url(TintangHanunuo.otf);
@@ -183,6 +188,11 @@ button:hover{
 }
 .hanunoo {
   font-family: Hanunoo;
+
+}
+
+.buhid {
+  font-family: Buhid;
 
 }
 

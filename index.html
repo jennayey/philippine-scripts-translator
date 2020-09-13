@@ -2,96 +2,150 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="css/index.css" />
-<script src="js/index.js"></script>
+    <script src="js/index.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="Philippine Scripts Translator" />
-    <meta property="og:description" content="Translate words and sentences to the Philippine Writing Scripts" />
-    <meta property="og:image" content="https://jennayey.com/philippine-scripts-translator/assets/images/OG/share-card.jpg" />
-    <meta property="og:url" content="https://jennayey.com/philippine-scripts-translator/">
-    
-    <meta name="twitter:title" content="Philippine Scripts Translator">
-    <meta name="twitter:description" content="Translate words and sentences to the Philippine Writing Scripts">
-    <meta name="twitter:image" content="https://jennayey.com/philippine-scripts-translator/assets/images/OG/share-card.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      property="og:description"
+      content="Translate words and sentences to the Philippine Writing Scripts"
+    />
+    <meta
+      property="og:image"
+      content="https://jennayey.com/philippine-scripts-translator/assets/images/OG/share-card.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://jennayey.com/philippine-scripts-translator/"
+    />
+
+    <meta name="twitter:title" content="Philippine Scripts Translator" />
+    <meta
+      name="twitter:description"
+      content="Translate words and sentences to the Philippine Writing Scripts"
+    />
+    <meta
+      name="twitter:image"
+      content="https://jennayey.com/philippine-scripts-translator/assets/images/OG/share-card.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
 
     <title>Philippine Scripts Translator</title>
-    <meta name="description" content="Translates words and sentences to the Baybayin, Hanunoo, Buhid and Tagbanwa scripts">
-
+    <meta
+      name="description"
+      content="Translates words and sentences to the Baybayin, Hanunoo, Buhid and Tagbanwa scripts"
+    />
   </head>
   <body>
-  <div id="toast">
-    <p>Text copied</p></div>
+    <div id="toast">
+      <p>Text copied</p>
+    </div>
 
     <div class="flex-row">
-
-        <!-- Navigation / Header  -->
-    <div id="navigation-header" class="header ">
+      <!-- Navigation / Header  -->
+      <div id="navigation-header" class="header">
         <h3>Philippine Script Translator</h3>
-        <h2 style="font-family: Hanunoo;"></h2>
+        <h2 style="font-family: Hanunoo"></h2>
       </div>
       <!-- Navigation / Header End -->
-                <!-- Script picker and Switcher Div  -->
+      <!-- Script picker and Switcher Div  -->
 
-<div id="languageSwitch" class="flex-jcc switch border-bottom">
-    <div class="translator-main-switch  flex-jcc">
-<div class="dropdown">
-   <button id="dropdownButton" onclick="showDropdown()" class="dropdown-button">
-     <h3 id="languageSelected">Tagalog to Baybayin</h3>
-   </button>
-   <div id="dropdownContents" class="dropdown-contents">
-    <a onclick="changeLanguage(this)" id="baybayin">Tagalog to Baybayin</a>
-     <a onclick="changeLanguage(this)" id="hanunoo">Tagalog to Hanunoo</a>
-     <a onclick="changeLanguage(this)" id="buhid">Tagalog to Buhid</a>
-     <a id="tagbanwa" class="disabled" >Tagalog to Tagbanwa</a>
-    
-
-   </div>
-</div>
-</div>
-</div>
-  <!-- Script picker and Switcher Div End -->
+      <div id="languageSwitch" class="flex-jcc switch border-bottom">
+        <div class="translator-main-switch flex-jcc">
+          <div class="dropdown">
+            <button
+              id="dropdownButton"
+              onclick="showDropdown()"
+              class="dropdown-button"
+            >
+             <div id="languageSelector"> <h3 id="languageSelected">
+              Tagalog to Baybayin
+            
+            </h3>
+            <span class="caret-icon">
+              <svg
+                version="1.1"
+                id="Layer_1"
+                width="10"
+                height="10"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px"
+                y="0px"
+                viewBox="0 0 20 20"
+                style="enable-background: new 0 0 20 20"
+                xml:space="preserve"
+              >
+                <path
+                  fill="#22735f"
+                  d="M19.5,5.7L19.5,5.7c-0.8-1.1-2.3-1.3-3.4-0.5L10,9.8L3.9,5.2C2.8,4.4,1.3,4.6,0.5,5.7l0,0C-0.3,6.8-0.1,8.3,1,9.1l7.5,5.7
+c0.5,0.3,1,0.5,1.5,0.5c0.5,0,1.1-0.1,1.5-0.5L19,9.1C20.1,8.3,20.3,6.8,19.5,5.7z"
+                />
+              </svg>
+            </span></div>
+            </button>
+            <div id="dropdownContents" class="dropdown-contents">
+              <a onclick="changeLanguage(this)" id="baybayin"
+                >Tagalog to Baybayin
+              </a>
+              <a onclick="changeLanguage(this)" id="hanunoo"
+                >Tagalog to Hanunoo</a
+              >
+              <a onclick="changeLanguage(this)" id="buhid">Tagalog to Buhid</a>
+              <a onclick="changeLanguage(this)" id="tagbanwa"
+                >Tagalog to Tagbanwa</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Script picker and Switcher Div End -->
       <!-- Main Translator Div -->
       <div id="translatorMain" class="translator-main flex-jcc">
-        
-        
-  
-          <!-- Translator Blocks Div  -->
-          <div class="translator-main-blocks">
-            <!-- Tagalog Text Area -->
-            <div class="translator-main-blocks-raw border-right border-bottom">
-              <label for="tagalogTextArea">Tagalog</label>
-              <textarea
-                name="tagalog-text-area"
-                id="tagalogTextArea"
-                placeholder="Type text here"
-                onclick="focus()"
-                onkeyup="convertText()"
-              ></textarea>
-              <button id="clearButton" onclick="clearText()" style="cursor: pointer;">Clear</button>
-  
-            </div>
-  
-            <!-- Tagalog Text Area  End-->
-  
-            <!-- Translated  Text Area -->
+        <!-- Translator Blocks Div  -->
+        <div class="translator-main-blocks">
+          <!-- Tagalog Text Area -->
+          <div class="translator-main-blocks-raw border-right border-bottom">
+            <label for="tagalogTextArea">Tagalog</label>
+            <textarea
+              name="tagalog-text-area"
+              id="tagalogTextArea"
+              placeholder="Type text here"
+              onclick="focus()"
+              onkeyup="convertText()"
+            ></textarea>
+            <button
+              id="clearButton"
+              onclick="clearText()"
+              style="cursor: pointer"
+            >
+              Clear
+            </button>
+          </div>
+
+          <!-- Tagalog Text Area  End-->
+
+          <!-- Translated  Text Area -->
           <div class="translator-main-blocks-translated border-bottom">
             <label for="translatedTextArea">Translation</label>
 
-              <textarea 
-              
-                name="translated-text-area"
-                id="translatedTextArea"
-
-                readonly
-              ></textarea>
-              <button id="copyButton" onclick="copyText()" style="cursor: pointer;">Copy</button>
-
+            <textarea
+              name="translated-text-area"
+              id="translatedTextArea"
+              readonly
+            ></textarea>
+            <button
+              id="copyButton"
+              onclick="copyText()"
+              style="cursor: pointer"
+            >
+              Copy
+            </button>
           </div>
-  
-            <!-- Translated Text Area  End-->
-          </div>
-          <!-- Translator Blocks Div End  -->
+
+          <!-- Translated Text Area  End-->
+        </div>
+        <!-- Translator Blocks Div End  -->
       </div>
       <!-- Main Translator Div -->
     </div>

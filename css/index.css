@@ -56,6 +56,11 @@ Philippine Translator Scripts Stylesheet
   src: url(.././assets/fonts/Baybayin/TintangBuhid2.otf);
 }
 
+@font-face {
+  font-family: Tagbanwa;
+  src: url(.././assets/fonts/Baybayin/TintangTagbanwa.otf);
+}
+
 /* @font-face {
   font-family: Hanunuo;
   src: url(TintangHanunuo.otf);
@@ -196,6 +201,11 @@ button:hover{
 
 }
 
+.tagbanwa {
+  font-family: Tagbanwa;
+
+}
+
 /* Toast */
 
 #toast {
@@ -239,7 +249,7 @@ margin: 15px;}
   text-align: center;
   min-width: 220px;
   
-  right: -22px;
+  right: -8px;
   
   box-shadow: var(--box-shadow-darker);
   border-radius: 20px;
@@ -272,6 +282,18 @@ border-radius: 20px;
   to {opacity: 0;}
 }
 
+.caret-icon {
+  margin: 0px 5px;
+  display: inline-block;
+}
+
+#languageSelector{
+  display: inline-block;
+}
+
+#languageSelected{
+  display: inline-block;
+}
 /* ************************************************************************************************** */
 
 /* 04 Mobile Styles */

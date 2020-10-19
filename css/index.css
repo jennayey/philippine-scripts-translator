@@ -105,7 +105,7 @@ body {
   align-items: center;
 }
 .header {
-  justify-content: flex-start;
+  justify-content: space-between;
   padding: 0 20px;
   box-shadow: var(--box-shadow);
 }

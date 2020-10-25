@@ -43,17 +43,17 @@ Philippine Translator Scripts Stylesheet
 
 @font-face {
   font-family: Baybayin;
-  src: url(.././assets/fonts/Baybayin/BaybayinNamin2020-4.otf);
+  src: url(.././assets/fonts/Baybayin/Baybayin-2020.otf);
 }
 
 @font-face {
   font-family: Hanunoo;
-  src: url(.././assets/fonts/Baybayin/TintangHanunuo2.otf);
+  src: url(.././assets/fonts/Baybayin/TintangHanunuo.otf);
 }
 
 @font-face {
   font-family: Buhid;
-  src: url(.././assets/fonts/Baybayin/TintangBuhid2.otf);
+  src: url(.././assets/fonts/Baybayin/TintangBuhid.otf);
 }
 
 @font-face {

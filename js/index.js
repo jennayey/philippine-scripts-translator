@@ -54,7 +54,7 @@ function baybayinTranslate() {
   rawText = rawText.replace(/ba/g, "\u170A");
   rawText = rawText.replace(/ma/g, "\u170B");
   rawText = rawText.replace(/ya/g, "\u170C");
-  rawText = rawText.replace(/ra/g, "\u170D");
+  rawText = rawText.replace(/ra/g, "\u1707");
   rawText = rawText.replace(/la/g, "\u170E");
   rawText = rawText.replace(/wa/g, "\u170F");
   rawText = rawText.replace(/sa/g, "\u1710");
@@ -69,7 +69,7 @@ function baybayinTranslate() {
   rawText = rawText.replace(/bi/g, "\u170A\u1712");
   rawText = rawText.replace(/mi/g, "\u170B\u1712");
   rawText = rawText.replace(/yi/g, "\u170C\u1712");
-  rawText = rawText.replace(/ri/g, "\u170D\u1712");
+  rawText = rawText.replace(/ri/g, "\u1707\u1712");
   rawText = rawText.replace(/li/g, "\u170E\u1712");
   rawText = rawText.replace(/wi/g, "\u170F\u1712");
   rawText = rawText.replace(/si/g, "\u1710\u1712");
@@ -84,7 +84,7 @@ function baybayinTranslate() {
   rawText = rawText.replace(/bu/g, "\u170A\u1713");
   rawText = rawText.replace(/mu/g, "\u170B\u1713");
   rawText = rawText.replace(/yu/g, "\u170C\u1713");
-  rawText = rawText.replace(/ru/g, "\u170D\u1713");
+  rawText = rawText.replace(/ru/g, "\u1707\u1713");
   rawText = rawText.replace(/lu/g, "\u170E\u1713");
   rawText = rawText.replace(/wu/g, "\u170F\u1713");
   rawText = rawText.replace(/su/g, "\u1710\u1713");
@@ -100,7 +100,7 @@ function baybayinTranslate() {
   rawText = rawText.replace(/b/g, "\u170A\u1714");
   rawText = rawText.replace(/m/g, "\u170B\u1714");
   rawText = rawText.replace(/y/g, "\u170C\u1714");
-  rawText = rawText.replace(/r/g, "\u170D\u1714");
+  rawText = rawText.replace(/r/g, "\u1707\u1714");
   rawText = rawText.replace(/l/g, "\u170E\u1714");
   rawText = rawText.replace(/w/g, "\u170F\u1714");
   rawText = rawText.replace(/s/g, "\u1710\u1714");

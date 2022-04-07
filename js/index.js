@@ -50,7 +50,8 @@ function baybayinTranslate() {
   rawText = rawText.replace(/nga/g, "\u1705");
   rawText = rawText.replace(/ngi/g, "\u1705\u1712");
   rawText = rawText.replace(/ngu/g, "\u1705\u1713");
-  rawText = rawText.replace(/ng/g, "\u1708\u1705\u1714");
+  rawText = rawText.replace(/ng/g, "\u1705\u1714");
+  // rawText = rawText.replace(/ng/g, "\u1708\u1705\u1714");
 
 
   rawText = rawText.replace(/ka/g, "\u1703");

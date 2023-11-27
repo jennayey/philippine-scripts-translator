@@ -113,6 +113,7 @@ body {
 .flex-row {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .translator-main-blocks {
@@ -293,6 +294,14 @@ border-radius: 20px;
 
 #languageSelected{
   display: inline-block;
+}
+
+.footer {
+  padding: 0 20px;
+}
+
+.footer p{
+  font-weight: 600;
 }
 /* ************************************************************************************************** */
 
